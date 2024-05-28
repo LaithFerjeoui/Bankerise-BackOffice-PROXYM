@@ -2,26 +2,43 @@
 import BarChart from './Components/BarChart';
 import { TextGenerateEffect } from "@components/Text-Generate-Effect";
 import PieChart from './Components/PieChart';
+import LineChart from './Components/LineChart';
+import Dropdown from './Components/Dropdown';
+
 
 
 const Dashboard = () => {
   // Example data for the chart
   const BarData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['backoffice', 'CSA', 'Studio', 'Customer', 'demo'],
     datasets: [{
-      label: 'Sample Data',
-      data: [65, 59, 80, 81, 56, 55, 40], // Sample data values
+      label: 'Logins',
+      data: [65, 59, 80, 81, 2, 55, 10], // Sample data values
       backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color for the bars
       borderColor: 'rgba(54, 162, 235, 1)', // Border color for the bars
       borderWidth: 1
     }]
   };
+  const LineData = {
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'],
+    datasets: [
+      {
+        label: 'API Requests',
+        data: [65, 59, 80, 81, 56, 4, 40, 45, 23, 17, 35, 65, 80, 85, 78, 92, 105, 75, 60, 45, 32, 55, 65, 72],
+        fill: false,
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        tension: 0.1,
+      },
+    ],
+  };
+  
   const PieData = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: ['backoffice', 'CSA', 'Studio', 'Customer', 'demo'],
     datasets: [
       {
         label: 'User Distribution',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [12, 19, 3, 5, 2],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
@@ -50,9 +67,13 @@ const Dashboard = () => {
         <div className='w-2/3 bg-white/80 rounded-2xl px-auto p-4 m-7 shadow-xl'>
         <BarChart data={BarData} />
       </div>
-      <div className='bg-white/80 w-1/3 rounded-2xl px-auto p-4 m-7 '>
+      <div className='bg-white/80 w-1/3 rounded-2xl px-auto p-4 m-7 shadow-xl'>
         <PieChart data={PieData}/>
       </div>
+      </div>
+      <div className='bg-white/80 h-fit rounded-2xl px-auto p-4 m-7 shadow-xl'>
+        <Dropdown/>
+        <LineChart data={LineData}/>
       </div>
       
     </div>
