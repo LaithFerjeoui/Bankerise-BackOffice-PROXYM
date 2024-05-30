@@ -10,6 +10,8 @@ import AppSegments from "../Views/AppSegments";
 import { Context } from "../utils/context";
 import AppMobileVersions from "../Views/AppMobileVersions";
 import ConfigureSegmentsTable from "./ConfigureSegmentsTable";
+import DuplicateRole from "../Views/DuplicateRole";
+import AddRole from "../Views/AddRole";
 
 
 const tabs = [
@@ -74,6 +76,8 @@ const ApplicationEdit = () => {
                 <Route path="mobile-versions/*" element={<AppMobileVersions />} />
                 <Route path="roles/*" element={<AppRoles />} />
                 <Route path="roles/editRole/*" element={<EditRole />} />
+                <Route path="roles/duplicateRole/*" element={<DuplicateRole />} />
+                <Route path="roles/addRole/*" element={<AddRole />} />
                 <Route path="users/*" element={<AppUsers />} >
                     <Route path="addUser/*" />
                 </Route>

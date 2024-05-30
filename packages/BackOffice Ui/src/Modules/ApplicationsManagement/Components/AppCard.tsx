@@ -25,8 +25,8 @@ const AppCard: React.FC<CardDataStatsProps> = ({
             </h4>
             <span className="text-sm font-medium text-gray-500">{description}</span>
           </div>
-          <div className='absolute right-6 bottom-4 hover:scale-125 duration-300'>
-            <FaChevronRight size="19" color='white' />
+          <div className='absolute right-6 bottom-4 hover:scale-125 duration-300 text-[--txt]'>
+            <FaChevronRight size="19"  />
           </div>
         </div>
       </div>

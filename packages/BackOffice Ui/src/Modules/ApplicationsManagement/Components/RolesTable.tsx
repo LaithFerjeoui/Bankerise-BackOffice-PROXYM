@@ -6,7 +6,7 @@ import PrimaryButton from "@components/Button";
 import Pagination from "@components/Pagination";
 import SharedTable from "../../../Components/SharedTable";
 import { FaEye } from "react-icons/fa";
-import { useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { useGetAllRolesQuery } from "../../../store/admin-API/roles-controller/roles-controller_endpoints";
 import { Puff } from "react-loader-spinner";
 import { toast } from "react-toastify";
@@ -23,7 +23,7 @@ const RolesTable = () => {
     const actions = [
         {
             label: '',
-            onClick: () => { },
+            onClick: () => { Navigate('duplicateRole/') },
             icon: <HiOutlineDocumentDuplicate size={21} className="text-[--txt] hover:scale-105 duration-300 hover:cursor-pointer" />,
             className: ''
         },
@@ -64,14 +64,16 @@ const RolesTable = () => {
                                         </p>
                                     </div>
                                     <div className="mt-4 sm:ml-16 sm:mt-0 flex gap-2">
-                                        <PrimaryButton text="Add Role " />
-                                        <button
-                                            type="button"
-                                            className=" rounded-md bg-[--disableButton] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:text-[--txt] hover:bg-[--disableHover] duration-300 flex items-center gap-1"
-                                        >
-                                            <BsDiagram3Fill />
-                                            Composed Permissions
-                                        </button>
+                                        <Link to={"addRole/"}  >
+                                            <PrimaryButton text="Add Role " />
+                                            </Link>
+                                            <button
+                                                type="button"
+                                                className=" rounded-md bg-[--disableButton] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:text-[--txt] hover:bg-[--disableHover] duration-300 flex items-center gap-1"
+                                            >
+                                                <BsDiagram3Fill />
+                                                Composed Permissions
+                                            </button>
                                     </div>
                                 </div>
                                 <div className="mt-8 flow-root">

@@ -6,8 +6,8 @@ export const SlideNextButton = ({ pos, setter }: any) => {
     
     return (
         <>
-            {pos && setter ? <div className="  mt-3 ">
-                < button onClick={() => {
+            {pos && setter ? <div className=" text-[--txt] mt-3 ">
+                < button  onClick={() => {
                     swiper.slidePrev()
                     console.log(setter)
                     setter({
@@ -31,19 +31,19 @@ export const SlideNextButton = ({ pos, setter }: any) => {
                       }
                       )
                     }} className="w-24 h-32 absolute left-12 top-10 z-50" >
-                    <FaAngleUp color="white" size={20} />
+                    <FaAngleUp  size={20} />
                 </button >
                 <button onClick={() => swiper.slideNext()} className="w-24 h-32 absolute left-12 z-50">
-                    <FaAngleDown color="white" size={20} />
+                    <FaAngleDown  size={20} />
                 </button>
             </div >
                 :
-                <div className=" mt-3 ">
+                <div className="text-[--txt] mt-3 ">
                     <button onClick={() => swiper.slidePrev()} className="w-24 h-32 ">
-                        <FaAngleUp color="white" size={20} />
+                        <FaAngleUp  size={20} />
                     </button>
                     <button onClick={() => swiper.slideNext()} className="w-24 h-32 ">
-                        <FaAngleDown color="white" size={20} />
+                        <FaAngleDown  size={20} />
                     </button>
                 </div>
             }

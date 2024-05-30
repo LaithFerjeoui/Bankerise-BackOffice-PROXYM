@@ -1,5 +1,5 @@
 import { IoLockOpen } from "react-icons/io5";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ConfirmationForDisableModal from "./ConfirmationForDisableModal";
 import { HiOutlineTrash } from "react-icons/hi";
 import ConfirmationModal from "./ConfirmationModal";

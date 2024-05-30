@@ -10,13 +10,13 @@ import { attribute } from "../../../store/admin-API/applications-controller/appl
 const words = `Application Information`;
 
 
-const AppInformations  = () => {
+const AppInformations = () => {
     const { id } = useParams();
     //console.log(id)
 
-    const { data, error, isLoading } = useGetApplicationByIdQuery({id,attr : true});
+    const { data, error, isLoading } = useGetApplicationByIdQuery({ id, attr: true });
     if (isLoading) {
-    return <p>Loading...</p>;
+        return <p>Loading...</p>;
     }
 
     if (error) {
@@ -152,7 +152,7 @@ const AppInformations  = () => {
                 </div>
             </div>
 
-<AuthenticationConfiguration configItems={myconfig} />
+            <AuthenticationConfiguration configItems={myconfig} />
 
             <div className="mt-6 flex items-center justify-center gap-x-6">
                 <Link to={"/private/applications-management"}>

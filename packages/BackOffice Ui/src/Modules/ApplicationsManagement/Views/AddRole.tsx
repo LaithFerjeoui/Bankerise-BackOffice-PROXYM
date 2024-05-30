@@ -5,13 +5,12 @@ import { Link, useParams } from "react-router-dom"
 import { toast } from "react-toastify"
 
 
-
-const EditRole = () => {
-  const { id } = useParams();
+const AddRole = () => {
+    const { id } = useParams();
   return (
     <>
     <div className="mt-14">
-    <AppStatus edit={true} />
+    <AppStatus add={true} />
     <FeaturesSwiper/>
     <div className="mt-16 flex items-center justify-center gap-x-6 ">
                 <Link to={"/private/applications-management/edit/"+id+"/roles"}>
@@ -20,7 +19,7 @@ const EditRole = () => {
                     </button>
                 </Link>
                 <Link to={"/private/applications-management/edit/"+id+"/roles"}  >
-                    <PrimaryButton text={"Save"} onClick={() => toast.success("Saved")} />
+                    <PrimaryButton text={"Save"} onClick={() => toast.success("Role Created Successfully.")} />
                 </Link>
             </div>
 
@@ -30,4 +29,4 @@ const EditRole = () => {
   )
 }
 
-export default EditRole
+export default AddRole

@@ -30,7 +30,7 @@ export const roles_controller = {
 }
 export const application_controlle_endpoints = {
     ConfigApplication: '/configuration/applications',
-    Features: "/features",
+    Features: "/configuration/applications/features",
     ComposedPermissions: "/composed-permissions",
     RegistrationMapping : "/registration-mapping"
 }

@@ -66,6 +66,7 @@ const applicationEndpoints = applications_controlle.injectEndpoints({
     getFeatureById: builder.query({
       query: ({ id }) => ({
         url: `${application_controlle_endpoints.Features}/${id}`,
+        params: id,
       })
     }),
     getComposedPermissionsById: builder.query({
