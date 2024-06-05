@@ -11,8 +11,6 @@ const APP_ADMIN = "ADMINISTRATION"
 const TYPE_APP = "REGULAR_APPLICATION"
 const TYPE_GATE = "GATEWAY_APPLICATION"
 import { ApplicationDto } from "../../../store/admin-API/applications-controller/application_controller_schemas"
-
-
 import { useGetConfigApplicationQuery } from "../../../store/admin-API/applications-controller/applications_controller_endpoints";
 
 

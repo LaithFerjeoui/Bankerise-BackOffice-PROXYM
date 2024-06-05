@@ -10,11 +10,17 @@ const modulesEndpoints = modules_controll.injectEndpoints({
         params: attr
       })
     }),
+    getAllChannels: builder.query({
+      query: (attr) => ({
+        url: `${modules_controller_endpoints.getAllChannels}/${attr}`,
+        params: attr
+      })
+    }),
   }),
 });
 
 export const {
   useGetAllFeaturesbyIdQuery,
-  
+  useGetAllChannelsQuery,
 } = modulesEndpoints;
 

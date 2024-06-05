@@ -19,7 +19,6 @@ export const store = configureStore({
     [user_app_management.reducerPath]: user_app_management.reducer,
     [global_parameter_controller.reducerPath]: global_parameter_controller.reducer,
     [roles_controll.reducerPath]: roles_controll.reducer,
-
     [HeaderSlice.reducerPath]: HeaderSlice.reducer,
   },
 
