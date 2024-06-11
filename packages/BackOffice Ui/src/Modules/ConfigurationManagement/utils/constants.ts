@@ -13,10 +13,10 @@ export const GlobalParams = [
     // Add more entries as needed
 ];
 export const Dictionary = [
-    { code: 3, content: "EN: Could not persist this data, please check your request", category: "Exceptions" },
-    { code: 4, content: "EN: Requested data not found", category: "Exceptions" },
-    { code: 5, content: "EN: Invalid input data, please check your request", category: "Validation" },
-    { code: 6, content: "EN: Internal server error, please try again later", category: "Exceptions" },
+    { code: 120, content: "EN: Could not persist this data, please check your request", category: "Exceptions" },
+    { code: 11, content: "EN: Requested data not found", category: "Exceptions" },
+    { code: 130, content: "EN: Invalid input data, please check your request", category: "Validation" },
+    { code: 121, content: "EN: Internal server error, please try again later", category: "Exceptions" },
     { code: 7, content: "EN: Unauthorized access, please log in", category: "Security" },
     // Add more entries as needed
 ];
